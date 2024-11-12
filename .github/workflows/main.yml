@@ -1,6 +1,9 @@
 name: Primer workflow
 
-on: push
+on:
+  push:
+    branches:
+      - nuevafeature
 
 jobs:
   test:
@@ -11,8 +14,9 @@ jobs:
       - name: Probar codigo
         run: python3 main.py
 
-  hola_mundo:
+  build_push:
     runs-on: ubuntu-latest
+    needs: test
 
     steps:
       -
