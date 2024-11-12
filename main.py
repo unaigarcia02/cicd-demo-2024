@@ -1,1 +1,1 @@
-printLULU("Hola lulu")
+print("Hola lulu")
